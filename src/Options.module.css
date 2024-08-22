@@ -1,22 +1,25 @@
 body {
   font-size: 1.6rem;
   margin: 0;
-  padding: 0;
+  padding: 5rem;
 }
 .button {
   background-color: #3f70ef;
   border: 2px solid #3f70ef;
   margin: 5px;
-
   cursor: pointer;
+  color: white;
 }
 .button:hover {
   border: 2px solid white;
+  color: white;
 }
 .reset {
   background-color: #df1204;
+  color: white;
   margin: 5px;
 }
 .reset:hover {
   border: 2px solid white;
+  color: white;
 }
