@@ -1,7 +1,7 @@
-import Options from "./Options";
-import Feedback from "./Feedback";
-import useFeedback from "./useFeedback";
-import Notification from "./Notification";
+import Options from "./Options"; //A component that provides buttons for users to give feedback.
+import Feedback from "./Feedback"; //A component that displays the feedback summary.
+import useFeedback from "./useFeedback"; //A custom hook that manages the feedback state.
+import Notification from "./Notification"; //A component that displays a message when there is no feedback.
 import "./App.css";
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
   return (
     <>
       <div>
-        <h1>Sip Happens Café</h1>
+        <h1>Hard Rock Café</h1>
         <p>
           Please leave your feedback about our service by selecting one of the
           options below.
