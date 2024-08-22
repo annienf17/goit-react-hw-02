@@ -23,6 +23,7 @@ export default function useFeedback() {
 
   const resetFeedback = () => {
     setFeedback({ good: 0, neutral: 0, bad: 0 });
+    localStorage.removeItem("feedback");
   };
 
   return { feedback, updateFeedback, resetFeedback };
