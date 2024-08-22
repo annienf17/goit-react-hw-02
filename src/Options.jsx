@@ -1,5 +1,6 @@
-import React from "react";
+import PropTypes from "prop-types";
 import css from "./Options.module.css";
+
 export default function Options({
   updateFeedback,
   resetFeedback,
@@ -24,3 +25,9 @@ export default function Options({
     </>
   );
 }
+
+Options.propTypes = {
+  updateFeedback: PropTypes.func.isRequired,
+  resetFeedback: PropTypes.func.isRequired,
+  totalFeedback: PropTypes.number.isRequired,
+};
