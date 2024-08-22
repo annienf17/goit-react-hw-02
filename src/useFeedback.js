@@ -26,5 +26,10 @@ export default function useFeedback() {
     localStorage.removeItem("feedback");
   };
 
+  // Reset feedback when the component mounts
+  useEffect(() => {
+    resetFeedback();
+  }, []);
+
   return { feedback, updateFeedback, resetFeedback };
 }
