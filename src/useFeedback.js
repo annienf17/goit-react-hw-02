@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 
 export default function useFeedback() {
-  const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });
-
-  useEffect(() => {
+  const [feedback, setFeedback] = useState(() => {
     const savedFeedback = localStorage.getItem("feedback");
-    if (savedFeedback) {
-      setFeedback(JSON.parse(savedFeedback));
-    }
-  }, []);
+    return savedFeedback
+      ? JSON.parse(savedFeedback)
+      : { good: 0, neutral: 0, bad: 0 };
+  });
 
   useEffect(() => {
     localStorage.setItem("feedback", JSON.stringify(feedback));
@@ -23,13 +21,8 @@ export default function useFeedback() {
 
   const resetFeedback = () => {
     setFeedback({ good: 0, neutral: 0, bad: 0 });
-    localStorage.removeItem("feedback");
+    localStorage.removeItem("");
   };
-
-  // Reset feedback when the component mounts
-  useEffect(() => {
-    resetFeedback();
-  }, []);
 
   return { feedback, updateFeedback, resetFeedback };
 }
