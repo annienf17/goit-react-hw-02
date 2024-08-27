@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import css from "./Options.module.css";
 
 export default function Options({
@@ -25,9 +24,3 @@ export default function Options({
     </>
   );
 }
-
-Options.propTypes = {
-  updateFeedback: PropTypes.func.isRequired,
-  resetFeedback: PropTypes.func.isRequired,
-  totalFeedback: PropTypes.number.isRequired,
-};

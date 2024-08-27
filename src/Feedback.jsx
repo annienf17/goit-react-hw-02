@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 export default function Feedback({
   feedback,
   totalFeedback,
@@ -15,13 +13,3 @@ export default function Feedback({
     </div>
   );
 }
-
-Feedback.propTypes = {
-  feedback: PropTypes.shape({
-    good: PropTypes.number.isRequired,
-    neutral: PropTypes.number.isRequired,
-    bad: PropTypes.number.isRequired,
-  }).isRequired,
-  totalFeedback: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.number.isRequired,
-};
